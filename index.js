@@ -1,13 +1,8 @@
-require('dotenv').config();
-
 const express = require('express');
-
-console.log('\nmessage:', process.env.MSG);
-
 const server = express(); // creating an instance of an express server
 
 server.get('/', (req, res) => {
-  res.status(200).json({ message: process.env.MSG });
+  res.status(200).json({ hello: 'my name is jeff' });
 });
 
 const port = process.env.PORT || 4000;
